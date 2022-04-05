@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">IMCCalc</string>
+    <string name="calculadora_de_imc">Calculadora de IMC</string>
+    <string name="digite_seu_peso_em_kilogramos">Digite seu peso em kilogramos:</string>
+</resources>

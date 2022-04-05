@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:backgroundTint="@color/white"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:id="@+id/lblTitle"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginTop="33dp"
+        android:layout_marginBottom="58dp"
+        android:fontFamily="sans-serif-black"
+        android:text="Calculadora de IMC"
+        android:textAlignment="center"
+        android:textColor="@color/purpleTitle"
+        android:textSize="40sp"
+        app:layout_constraintBottom_toTopOf="@+id/lblKG"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/lblKG"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginBottom="14dp"
+        android:text="Digite seu peso em kilogramas:"
+        android:textColor="@color/black"
+        app:layout_constraintBottom_toTopOf="@+id/txtPesoKg"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/lblTitle" />
+
+    <TextView
+        android:id="@+id/lblAltura"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="17dp"
+        android:layout_marginBottom="29dp"
+        android:text="Digite sua altura em metros:"
+        android:textColor="@color/black"
+        app:layout_constraintBottom_toTopOf="@+id/txtAltura"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txtPesoKg" />
+
+    <EditText
+        android:id="@+id/txtAltura"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="1dp"
+        android:layout_marginEnd="1dp"
+        android:layout_marginBottom="56dp"
+        android:ems="10"
+        android:inputType="numberDecimal"
+        android:textColor="@color/black"
+        app:layout_constraintBottom_toTopOf="@+id/btnCalcIMC"
+        app:layout_constraintEnd_toEndOf="@+id/txtPesoKg"
+        app:layout_constraintStart_toStartOf="@+id/lblKG"
+        app:layout_constraintTop_toBottomOf="@+id/lblAltura"
+        tools:ignore="SpeakableTextPresentCheck" />
+
+    <EditText
+        android:id="@+id/txtPesoKg"
+        android:layout_width="250dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="18dp"
+        android:layout_marginBottom="14dp"
+        android:ems="10"
+        android:inputType="numberDecimal"
+        android:textColor="@color/black"
+        app:layout_constraintBottom_toTopOf="@+id/lblAltura"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/lblKG"
+        tools:ignore="SpeakableTextPresentCheck" />
+
+    <Button
+        android:id="@+id/btnCalcIMC"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="9dp"
+        android:layout_marginEnd="9dp"
+        android:layout_marginBottom="28dp"
+        android:backgroundTint="@color/colorButtonIMC"
+        android:text="Calcular IMC"
+        android:textColor="@color/white"
+        app:layout_constraintBottom_toTopOf="@+id/txtNumIMC"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txtAltura" />
+
+    <TextView
+        android:id="@+id/txtNumIMC"
+        android:layout_width="405dp"
+        android:layout_height="79dp"
+        android:padding="2dp"
+        android:textSize="20dp"
+        app:layout_constraintBottom_toTopOf="@+id/txtIMC"
+        app:layout_constraintStart_toStartOf="@+id/txtIMC"
+        app:layout_constraintTop_toBottomOf="@+id/btnCalcIMC" />
+
+    <Button
+        android:id="@+id/button2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="9dp"
+        android:layout_marginBottom="21dp"
+        android:backgroundTint="#FFF8F1F1"
+        android:shadowColor="@color/black"
+        android:text="Limpar"
+        android:textColor="@color/colorButtonLimpiar"
+        android:textColorHighlight="@color/black"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="@+id/txtIMC"
+        app:layout_constraintTop_toBottomOf="@+id/txtIMC" />
+
+    <TextView
+        android:id="@+id/txtIMC"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="0dp"
+        android:layout_marginEnd="0dp"
+        android:layout_marginBottom="0dp"
+        android:padding="5dp"
+        android:textAlignment="center"
+        android:textColor="@color/black"
+        android:textSize="12sp"
+        app:layout_constraintBottom_toTopOf="@+id/button2"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txtNumIMC" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
